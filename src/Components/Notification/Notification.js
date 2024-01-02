@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../NavBar/NavBar';
 
 const Notification = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [username, setUsername] = useState("");
   const [doctorData, setDoctorData] = useState(null);
-  const [appointmentData, setAppointmentData] = useState(null);
+  const [appointmentData, setAppointmentData] = useState("");
 
   useEffect(() => {
     const storedUsername = sessionStorage.getItem('email');
@@ -35,7 +35,8 @@ const Notification = ({ children }) => {
             <div className="appointment-card__content">
               <h3 className="appointment-card__title">Appointment Details</h3>
               <p className="appointment-card__message">
-                <strong>Doctor:</strong> {doctorData?.name}
+                <strong>Doctor: Dr. Jiao Yang</strong> {doctorData?.name}
+                Speciality: Dentist
               </p>
             </div>
           </div>
