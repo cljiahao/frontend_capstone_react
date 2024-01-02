@@ -1,3 +1,6 @@
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
+
 import "./NavBar.css"
 
 const NavBar = () => {
@@ -16,21 +19,27 @@ const NavBar = () => {
         </div>
         <ul className="nav__links active">
           <li className="link">
-            <a href="../Landing_Page/LandingPage.html">Home</a>
+            <Link to="/" onClick={() => {
+          window.location.href = "/";
+        }}>Home</Link>
           </li>
           <li className="link">
             <a href="#">Appointments</a>
           </li>
 
               <li className="link">
-                <a href="../Sign_Up//Sign_Up.html">
+              <Link to="/Sign_Up" onClick={() => {
+                window.location.href = "/Sign_Up";
+                }}>
                   <button className="btn1">Sign Up</button>
-                </a>
+                  </Link>
               </li>
               <li className="link">
-                <a href="../Login/Login.html">
+              <Link to="/Login" onClick={() => {
+                window.location.href = "/Login";
+                }}>
                   <button className="btn1">Login</button>
-                </a>
+                  </Link>
               </li>
 
         </ul>
