@@ -45,7 +45,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
         <div className="form-group">
           <label htmlFor="date">Date of Appointment:</label>
           <input
-            type="tel"
+            type="date"
             id="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
@@ -55,7 +55,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
         <div className="form-group">
           <label htmlFor="time">Book Time Slot:</label>
           <input
-            type="tel"
+            type="time"
             id="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
